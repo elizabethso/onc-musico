@@ -508,7 +508,7 @@ var CicData =
 					info:
 					[
 						{
-							link: "content/data_seg.html",
+							link: "about:blank",
 							text: "Data Segmentation For Privacy"
 						},
 						{
