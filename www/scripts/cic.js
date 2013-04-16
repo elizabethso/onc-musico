@@ -11,7 +11,21 @@ var Cic =
 		Cic.canvas = document.getElementById("cic");
 		Cic.info = document.getElementById("cic_info");
 		
-		Cic.graph = new $jit.RGraph(
+		
+$jit.RGraph.Plot.NodeTypes.implement({
+	'image': {
+		'render': function(node, canvas) {
+			var ctx = canvas.getCtx();
+			var img = new Image();
+			var pos = node.pos.getc(true);
+			img.src = 'images/OBC_tiny.png';
+			ctx.drawImage(img,pos.x-16,pos.y-16);
+		}
+	}
+});
+		
+		
+		Cic.graph = new $jit.RGraph(		
 			{
 				injectInto: Cic.canvas,
 				width: 600,
@@ -72,13 +86,13 @@ var Cic =
 				{
 					enable: true,
 					panning: true,
-					zooming: 10
+					zooming: 80
 				},
 				
 				Node:
 				{
-					color: $jit.util.rgbToHex([0, 100, 200]),
-					dim: 5
+					type: "image",
+					overridable: true
 				},
 				
 				onBeforePlotLine: function (adj)
