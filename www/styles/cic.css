@@ -59,3 +59,14 @@ a:hover
 {
 	text-decoration: underline;
 }
+
+.initiatives{
+cursor: pointer;
+padding: 2px 5px;
+border: 1px solid gray;
+background: #E1E1E1;
+}
+
+.open_initiative{
+background: yellow;
+}

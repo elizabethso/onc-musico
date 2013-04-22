@@ -3,6 +3,9 @@ var CicData =
 	{
 		id: "government_agency",
 		name: "Government Agency",
+		data: {
+			$type: "circle"
+		},
 		adjacencies:
 		[
 			{
@@ -10,7 +13,8 @@ var CicData =
 				nodeTo: "ambulatory_care_setting",
 				data:
 				{
-					hidden: true
+					//hidden: true,
+					html: '<h2>Example 1:</h2>		<a href="#" onClick="ddaccordion.expandone("initiatives", 0); return false">Expand 1st header</a> | <a href="#" onClick="ddaccordion.collapseone("initiatives", 0); return false">Collapse 1st header</a> | <a href="#" onClick="ddaccordion.toggleone("initiatives", 1); return false">Toggle 2nd header</a>	<h3 class="initiatives">Initiative X</h3>		<div class="the_initiative">		<img src="images/OBC.png" />		This initiative blah blah blah</div>'
 				}
 			},
 			{

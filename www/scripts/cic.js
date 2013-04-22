@@ -12,17 +12,17 @@ var Cic =
 		Cic.info = document.getElementById("cic_info");
 		
 		
-$jit.RGraph.Plot.NodeTypes.implement({
-	'image': {
-		'render': function(node, canvas) {
-			var ctx = canvas.getCtx();
-			var img = new Image();
-			var pos = node.pos.getc(true);
-			img.src = 'images/OBC_tiny.png';
-			ctx.drawImage(img,pos.x-16,pos.y-16);
-		}
-	}
-});
+		$jit.RGraph.Plot.NodeTypes.implement({
+			'image': {
+				'render': function(node, canvas) {
+					var ctx = canvas.getCtx();
+					var img = new Image();
+					var pos = node.pos.getc(true);
+					img.src = 'images/OBC_tiny.png';
+					ctx.drawImage(img,pos.x-16,pos.y-16);
+				}
+			}
+		});
 		
 		
 		Cic.graph = new $jit.RGraph(		
@@ -40,7 +40,6 @@ $jit.RGraph.Plot.NodeTypes.implement({
 				{
 					enable: true,
 					enableForEdges: true,
-					
 					onRightClick: function (obj, info, event)
 					{
 						var originNode = Cic.graph.graph.getClosestNodeToOrigin();
@@ -49,20 +48,11 @@ $jit.RGraph.Plot.NodeTypes.implement({
 						{
 							var adjacence = Cic.graph.graph.getAdjacence(obj.id, originNode.id);
 							
-							if (adjacence && !adjacence.data.hidden && adjacence.data.info)
+							if (adjacence && !adjacence.data.hidden && adjacence.data.html)
 							{
 								Cic.info.innerHTML = "<h1>" + adjacence.nodeFrom.name + " &harr; " + 
 									adjacence.nodeTo.name + "</h1>\n<h2>Initiatives</h2>\n<ul>";
-								
-								for (var a = 0; a < adjacence.data.info.length; a++)
-								{
-									var adjacenceInfo = adjacence.data.info[a];
-									
-									Cic.info.innerHTML += "\n\t<li><a href=\"" + adjacenceInfo.link + 
-										"\" target=\"_blank\">" + adjacenceInfo.text + "</a></li>";
-								}
-								
-								Cic.info.innerHTML += "</ul>";
+								Cic.info.innerHTML += adjacence.data.html;
 							}
 							else
 							{
