@@ -60,13 +60,28 @@ a:hover
 	text-decoration: underline;
 }
 
-.initiatives{
-cursor: pointer;
-padding: 2px 5px;
-border: 1px solid gray;
-background: #E1E1E1;
+.initiative{
+font-family: 'Calibri';
+font-size: 18px;
+font-weight: bold;
+line-height: 2;
 }
 
-.open_initiative{
-background: yellow;
+.init_info{
+font-family: 'Calibri';
+font-size: 14px;
+font-weight: bold;
+line-height: 2;
+}
+
+.initiative_div{
+display: none;
+position: relative;
+left: 10px;
+}
+
+.init_info_div{
+display: none;
+position: relative;
+left: 10px;
 }

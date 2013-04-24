@@ -4,7 +4,7 @@ var CicData =
 		id: "government_agency",
 		name: "Government Agency",
 		data: {
-			$type: "circle"
+			//$type: "circle"
 		},
 		adjacencies:
 		[
@@ -14,7 +14,7 @@ var CicData =
 				data:
 				{
 					//hidden: true,
-					html: '<h2>Example 1:</h2>		<a href="#" onClick="ddaccordion.expandone("initiatives", 0); return false">Expand 1st header</a> | <a href="#" onClick="ddaccordion.collapseone("initiatives", 0); return false">Collapse 1st header</a> | <a href="#" onClick="ddaccordion.toggleone("initiatives", 1); return false">Toggle 2nd header</a>		<h3 class="initiatives">Dogs</h3>		<div class="the_initiative">		<img src="images/OBC.png" />		The dog is a domestic blah blah blah		</div>'
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\">INITIATIVE TEXT<p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Sub Text</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">blah blah blah</div></span></div></span>"
 				}
 			},
 			{

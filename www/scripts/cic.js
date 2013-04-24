@@ -51,7 +51,7 @@ var Cic =
 							if (adjacence && !adjacence.data.hidden && adjacence.data.html)
 							{
 								Cic.info.innerHTML = "<h1>" + adjacence.nodeFrom.name + " &harr; " + 
-									adjacence.nodeTo.name + "</h1>\n<h2>Initiatives</h2>\n<ul>";
+									adjacence.nodeTo.name + "</h1>\n<h2>Initiatives</h2>";
 								Cic.info.innerHTML += adjacence.data.html;
 							}
 							else
