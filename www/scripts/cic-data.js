@@ -4,8 +4,8 @@ var CicData =
 		id: "government_agency",
 		name: "Government Agency",
 		data: {
-			//$type: "circle"
-		},
+                       img_file: "Gov_Ag1.png"
+               },
 		adjacencies:
 		[
 			{
@@ -14,7 +14,7 @@ var CicData =
 				data:
 				{
 					//hidden: true,
-					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\">INITIATIVE TEXT<p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Sub Text</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">blah blah blah</div></span></div></span>"
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>"
 				}
 			},
 			{
@@ -22,13 +22,7 @@ var CicData =
 				nodeTo: "epidemiology_public_health_repositories",
 				data:
 				{
-					info:
-					[
-						{
-							link: "about:blank",
-							text: "Public Health Reporting"
-						}
-					],
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			},
@@ -77,13 +71,7 @@ var CicData =
 				nodeTo: "primary_care_physician",
 				data:
 				{
-					info:
-					[
-						{
-							link: "about:blank",
-							text: "Public Health Reporting"
-						}
-					],
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			},
@@ -92,13 +80,7 @@ var CicData =
 				nodeTo: "secondary_provider_specialist_or_hospital",
 				data:
 				{
-					info:
-					[
-						{
-							link: "about:blank",
-							text: "Public Health Reporting"
-						}
-					],
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			}
@@ -107,6 +89,9 @@ var CicData =
 	{
 		id: "ambulatory_care_setting",
 		name: "Ambulatory Care Setting",
+		data: {
+                       img_file: "Amb_care.png"
+               },
 		adjacencies:
 		[
 			{
@@ -138,6 +123,7 @@ var CicData =
 				nodeTo: "patient",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -146,6 +132,7 @@ var CicData =
 				nodeTo: "payer",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -162,6 +149,7 @@ var CicData =
 				nodeTo: "primary_care_physician",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -170,6 +158,7 @@ var CicData =
 				nodeTo: "secondary_provider_specialist_or_hospital",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			}
@@ -178,6 +167,9 @@ var CicData =
 	{
 		id: "epidemiology_public_health_repositories",
 		name: "Epidemiology / Public Health Repositories",
+		data: {
+			   img_file: "PHR.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -185,6 +177,7 @@ var CicData =
 				nodeTo: "hie_hih",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			},
@@ -217,6 +210,7 @@ var CicData =
 				nodeTo: "pharmacy",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -225,6 +219,7 @@ var CicData =
 				nodeTo: "primary_care_physician",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			},
@@ -233,6 +228,7 @@ var CicData =
 				nodeTo: "secondary_provider_specialist_or_hospital",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: 1.0
 				}
 			}
@@ -241,6 +237,9 @@ var CicData =
 	{
 		id: "hie_hih",
 		name: "HIE / HIH",
+		data: {
+			   img_file: "HIE.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -326,6 +325,9 @@ var CicData =
 	{
 		id: "labs",
 		name: "Labs",
+		data: {
+			   img_file: "Labs.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -341,6 +343,7 @@ var CicData =
 				nodeTo: "payer",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -395,6 +398,9 @@ var CicData =
 	{
 		id: "patient",
 		name: "Patient",
+		data: {
+			   img_file: "Patient.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -402,6 +408,7 @@ var CicData =
 				nodeTo: "payer",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -410,6 +417,7 @@ var CicData =
 				nodeTo: "pharmacy",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -418,6 +426,7 @@ var CicData =
 				nodeTo: "primary_care_physician",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			},
@@ -426,6 +435,7 @@ var CicData =
 				nodeTo: "secondary_provider_specialist_or_hospital",
 				data:
 				{
+					html: "<span class=\"initiative\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv12');\" rel=\"nofollow\">Automate Blue Button Initiative (ABBI)</a><div id=\"mydiv12\" class=\"initiative_div\" style=\"display: none;\"><p><b>Initiative Description:</b> Through the Blue Button, consumers want the ability to exercise more access to and portability of their health care information. With the right privacy and security assurances, they want to be able to:</p><ul><li>Better understand their health and make more informed decisions</li><li>Help to make sure that they and all of their care team members are on the same page</li><li>Improve the accuracy and completeness of the information</li><li>Plug it into apps and tools that promise to make information truly available, when and where it is needed</li></ul><p/><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv13');return false\" rel=\"nofollow\">Meaningful Use Alignment</a><div id=\"mydiv13\" class=\"init_info_div\" style=\"display: none;\">View-Download-Transmit</div></span><span class=\"init_info\"><a href=\"javascript:;\" onmousedown=\"toggleDiv('mydiv14');return false\" rel=\"nofollow\">Standards in use</a><div id=\"mydiv14\" class=\"init_info_div\" style=\"display: none;\"><ul><li>Direct</li><li>Consolidated-CDA</li><li>OAuth 2.0 & Open ID</li><li>FHIR </li></ul></div></span></div></span>",
 					weight: -1.0
 				}
 			}
@@ -434,6 +444,9 @@ var CicData =
 	{
 		id: "payer",
 		name: "Payer",
+		data: {
+			   img_file: "Payer.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -479,6 +492,9 @@ var CicData =
 	{
 		id: "pharmacy",
 		name: "Pharmacy",
+		data: {
+			   img_file: "Pharmacy.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -502,6 +518,9 @@ var CicData =
 	{
 		id: "primary_care_physician",
 		name: "Primary Care Physician",
+		data: {
+			   img_file: "Physician.png"
+		   },
 		adjacencies:
 		[
 			{
@@ -531,6 +550,9 @@ var CicData =
 	},
 	{
 		id: "secondary_provider_specialist_or_hospital",
-		name: "Secondary Provider / Specialist or Hospital"
+		name: "Secondary Provider / Specialist or Hospital",
+		data: {
+			   img_file: "Hospital.png"
+		   },
 	}
 ];

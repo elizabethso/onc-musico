@@ -18,7 +18,7 @@ var Cic =
 					var ctx = canvas.getCtx();
 					var img = new Image();
 					var pos = node.pos.getc(true);
-					img.src = 'images/OBC_tiny.png';
+					img.src = img.src = 'images/' + node.data.img_file;
 					ctx.drawImage(img,pos.x-16,pos.y-16);
 				}
 			}
