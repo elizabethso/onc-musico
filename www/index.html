@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>ONC - CIC Map</title>
+		<title>ONC - MUSICO</title>
 		<link rel="stylesheet" type="text/css" href="styles/cic.css"/>
 		<script language="javascript" type="text/javascript" src="scripts/jit.js"></script>
 		<script language="javascript" type="text/javascript" src="scripts/cic.js"></script>
@@ -20,18 +20,26 @@
 	</head>
 	<body onload="Cic.init()">
 		<div id="cic"/>
+			<div id="title">
+				Meaningful Use - S&I Framework Coordination (MUSICO)
+			</div>
 		<div id="cic_info"/>
 		<span class="initiative">
-			<a href="javascript:;" onmousedown="toggleDiv('mydiv12');" rel="nofollow">Meaningful Use - S&I Framework Coordination (MUSICO)</a>
-			<div id="mydiv12" class="initiative_div" style="display: none;">
-				Click on an actor to bring it to the center of the graph then right click on a second actor to view the initiatives involved in that relationship<p/>
-				<span class="init_info">
-					<a href="javascript:;" onmousedown="toggleDiv('mydiv13');return false" rel="nofollow">Sub Text</a>
-					<div id="mydiv13" class="init_info_div" style="display: none;">
-						blah blah blah
-					</div>
-				</span>
-			</div>
+			<h1>Instructions:</h1>
+				<ol> 
+					<li>Left-Click on an actor to bring it to the center of the visualization tool</li>
+					<li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li>
+				</ol>
+				<!<a href="javascript:;" onmousedown="toggleDiv('mydiv12');" rel="nofollow"> </a>
+				<div id="mydiv12" class="initiative_div" style="display: none;">
+					Click on an actor to bring it to the center of the graph then right click on a second actor to view the initiatives involved in that relationship<p/>
+					<span class="init_info">
+						<a href="javascript:;" onmousedown="toggleDiv('mydiv13');return false" rel="nofollow">Sub Text</a>
+						<div id="mydiv13" class="init_info_div" style="display: none;">
+							blah blah blah
+						</div>
+					</span>>
+				</div>
 		</span>
 	</body>
 </html>

@@ -19,7 +19,7 @@ var Cic =
 					var img = new Image();
 					var pos = node.pos.getc(true);
 					img.src = img.src = 'images/' + node.data.img_file;
-					ctx.drawImage(img,pos.x-16,pos.y-16);
+					ctx.drawImage(img,pos.x-16,pos.y-70);
 				}
 			}
 		});
@@ -76,7 +76,7 @@ var Cic =
 				{
 					enable: true,
 					panning: true,
-					zooming: 80
+					zooming: false,
 				},
 				
 				Node:
@@ -128,5 +128,11 @@ var Cic =
 		
 		Cic.graph.loadJSON(CicData);
 		Cic.graph.refresh();
+		Cic.graph.config.levelDistance=230;
+		Cic.graph.fx.sequence({
+         onComplete: function() {
+         alert('Instructions:Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');
+         }
+       });
 	}
 };

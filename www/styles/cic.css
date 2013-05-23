@@ -11,7 +11,7 @@ h1, h2, div
 
 h1
 {
-	font-size: 10pt;
+	font-size: 18pt;
 }
 
 h2
@@ -22,6 +22,15 @@ h2
 div
 {
 	font: normal 8pt Tahoma;
+	background: white;
+}
+
+div#title
+{
+	font: normal 18pt Tahoma;
+	background: aqua;
+	text-align: center;
+
 }
 
 div#cic
@@ -31,11 +40,12 @@ div#cic
 	margin: 10px;
 	border: 1px solid black;
 	overflow: hidden;
+	/*background: yellow;*/
 }
 
 div#cic_info
 {
-	width: 400px;
+	width: 500px;
 	height: 580px;
 	position: absolute;
 	top: 0px;
@@ -43,6 +53,7 @@ div#cic_info
 	margin: 10px;
 	padding: 10px;
 	border: 1px solid black;
+	background: none;
 }
 
 li
