@@ -54,6 +54,7 @@ div#cic_info
 	padding: 10px;
 	border: 1px solid black;
 	background: none;
+	overflow-y:scroll; height:580;
 }
 
 li
