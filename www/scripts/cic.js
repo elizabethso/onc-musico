@@ -19,7 +19,7 @@ var Cic =
 					var img = new Image();
 					var pos = node.pos.getc(true);
 					img.src = img.src = 'images/' + node.data.img_file;
-					ctx.drawImage(img,pos.x-16,pos.y-70);
+					ctx.drawImage(img,pos.x-32,pos.y-70);
 				}
 			}
 		});
@@ -75,7 +75,7 @@ var Cic =
 				Navigation:
 				{
 					enable: true,
-					panning: true,
+					panning: false,
 					zooming: false,
 				},
 				
@@ -125,13 +125,34 @@ var Cic =
 				}
 			}
 		);
-		
+		$jit.RGraph.Label.HTML.implement({
+                       placeLabel: function(tag, node, controller){
+                               var pos = node.pos.getc(true),
+                               canvas = this.viz.canvas,
+                               ox = canvas.translateOffsetX,
+                               oy = canvas.translateOffsetY,
+                               sx = canvas.scaleOffsetX,
+                               sy = canvas.scaleOffsetY,
+                               radius = canvas.getSize();
+                               var labelPos = {
+                                       x: Math.round(pos.x * sx + ox + radius.width / 2.4), /* modified from "width / 2" to center label text-alignment */
+                                       y: Math.round(pos.y * sy + oy + radius.height / 2)
+                               };
+                                       
+                               var style = tag.style;
+                               style.left = labelPos.x + 'px';
+                               style.top = labelPos.y + 'px';
+                               style.display = this.fitsInCanvas(labelPos, canvas)? '' : 'none';
+                               
+                               controller.onPlaceLabel(tag, node);
+                       }
+               });
 		Cic.graph.loadJSON(CicData);
 		Cic.graph.refresh();
-		Cic.graph.config.levelDistance=230;
+		Cic.graph.config.levelDistance=200;
 		Cic.graph.fx.sequence({
          onComplete: function() {
-         alert('Instructions:Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');
+         /*alert('Instructions: Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');*/
          }
        });
 	}

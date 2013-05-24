@@ -22,7 +22,7 @@ h2
 div
 {
 	font: normal 8pt Tahoma;
-	background: white;
+	/*background: white;*/
 }
 
 div#title
@@ -95,4 +95,21 @@ left: 10px;
 display: none;
 position: relative;
 left: 10px;
+}
+
+.node{
+position: relative left:-600px; 
+font-family: 'Calibri';
+font-size: 12px;
+font-weight: bold;
+background: none;
+border:hidden; width: 120px; 
+text-wrap: unrestricted;
+word-wrap: break-word; width: 120px; length: 40px;
+text-align: center;
+}
+
+div#cic-label{
+overflow: visible; 
+position: absolute; top: 0px; left: -32px; width: 600px; height: 0px;
 }
