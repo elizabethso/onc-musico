@@ -18,7 +18,7 @@ var Cic =
 					var ctx = canvas.getCtx();
 					var img = new Image();
 					var pos = node.pos.getc(true);
-					img.src = img.src = 'images/' + node.data.img_file;
+					img.src = 'images/' + node.data.img_file;
 					ctx.drawImage(img,pos.x-32,pos.y-70);
 				}
 			}
@@ -29,7 +29,7 @@ var Cic =
 			{
 				injectInto: Cic.canvas,
 				width: 600,
-				height: 600,
+				height: 560,
 				
 				Edge:
 				{
@@ -90,7 +90,7 @@ var Cic =
 					adj.Edge.color = (adj.data.weight == 1.0) ? 
 							$jit.util.rgbToHex([0, 150, 0]) : 
 							$jit.util.rgbToHex([200, 0, 0]);
-					
+					adj.Edge.lineWidth=2;
 					if (adj.data.hidden)
 					{
 						adj.Edge.alpha = 0;
