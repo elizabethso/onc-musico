@@ -385,7 +385,7 @@ var CicData =
 		id: "patient",
 		name: "Patient",
 		data: {
-			   img_file: "Patient.png"
+			   img_file: "patient.png"
 		   },
 		adjacencies:
 		[
