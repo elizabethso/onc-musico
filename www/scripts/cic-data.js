@@ -476,7 +476,7 @@ var CicData =
 				nodeTo: "primary_care_physician",
 				data:
 				{
-					html: "<span class=\"initiative\"><h4> No S&I Initiatives Currently Exist for this Relationship</h4><h3>Instructions:</h3><ol> <li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol></span>",
+					html: "<span class=\"initiative\"><h4> S&I Framework Initiative To Be Determined</h4><h3>Instructions:</h3><ol> <li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol></span>",
 					weight: -1.0
 				}
 			},
@@ -485,7 +485,7 @@ var CicData =
 				nodeTo: "secondary_provider_specialist_or_hospital",
 				data:
 				{
-					html: "<span class=\"initiative\"><h4> No S&I Initiatives Currently Exist for this Relationship</h4><h3>Instructions:</h3><ol> <li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol></span>",
+					html: "<span class=\"initiative\"><h4> S&I Framework Initiative To Be Determined</h4><h3>Instructions:</h3><ol> <li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol></span>",
 					weight: -1.0
 				}
 			},
