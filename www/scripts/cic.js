@@ -56,7 +56,7 @@ var Cic =
 							}
 							else
 							{
-								Cic.info.innerHTML = "";
+								Cic.info.innerHTML = "<span class=\"initiative\"><h1>Instructions:</h1><ol><li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol><a href=\"http://wiki.siframework.org/\" target=\"_blank\"><img src= images/s&i_logo.png style=\"position:absolute; bottom:5px; right:5px;\"></a><img src= images/MusicoKey.png style=\"position:absolute; bottom:5px; left:5px;\"></span>";
 							}
 						}
 					},
@@ -123,7 +123,7 @@ var Cic =
 				
 				onPlaceLabel: function(element, node)
 				{
-					element.style.height = '90px';
+					element.style.height = '80px';
 					top_string = element.style.top;
 					top_number = top_string.substring(0,top_string.indexOf('px'));
 					element.style.top = (top_number - 70) + 'px';
