@@ -20,20 +20,7 @@ var Cic =
 					var pos = node.pos.getc(true);
 					img.src = 'images/' + node.data.img_file;
 					ctx.drawImage(img,pos.x-32,pos.y-70);
-				},
-				'contains': function(node, mousePos) {
-						window.alert("skdfj");
-                        var nodePos = node.pos.getc(true); 
-                        if(mousePos.x >=  (nodePos.x - node.data.width/2) && 
-                                mousePos.x <= (nodePos.x + node.data.width/2) && 
-                                mousePos.y >= (nodePos.y - node.data.height/2) && 
-                                mousePos.y <= (nodePos.y + node.data.height/2) ) { 
-										window.alert("!!");
-                                        return true; 
-                        } 
-
-                        return false; 
-                }
+				}
 			}
 		});
 		
@@ -82,15 +69,6 @@ var Cic =
 					onMouseLeave: function (obj, info, event)
 					{
 						Cic.canvas.style.cursor = "";
-					},
-					
-					onClick: function (obj, info, event)
-					{
-						var closeNode = Cic.graph.graph.getClosestNodeToOrigin();
-						if (closeNode.contains)
-						{
-							window.alert("aksdfj");
-						}
 					}
 				},
 				
