@@ -20,7 +20,20 @@ var Cic =
 					var pos = node.pos.getc(true);
 					img.src = 'images/' + node.data.img_file;
 					ctx.drawImage(img,pos.x-32,pos.y-70);
-				}
+				},
+				'contains': function(node, mousePos) {
+						window.alert("skdfj");
+                        var nodePos = node.pos.getc(true); 
+                        if(mousePos.x >=  (nodePos.x - node.data.width/2) && 
+                                mousePos.x <= (nodePos.x + node.data.width/2) && 
+                                mousePos.y >= (nodePos.y - node.data.height/2) && 
+                                mousePos.y <= (nodePos.y + node.data.height/2) ) { 
+										window.alert("!!");
+                                        return true; 
+                        } 
+
+                        return false; 
+                }
 			}
 		});
 		
@@ -69,6 +82,15 @@ var Cic =
 					onMouseLeave: function (obj, info, event)
 					{
 						Cic.canvas.style.cursor = "";
+					},
+					
+					onClick: function (obj, info, event)
+					{
+						var closeNode = Cic.graph.graph.getClosestNodeToOrigin();
+						if (closeNode.contains)
+						{
+							window.alert("aksdfj");
+						}
 					}
 				},
 				
@@ -112,16 +134,21 @@ var Cic =
 				
 				onCreateLabel: function(element, node)
 				{
-					element.innerHTML = node.name;
+					element.innerHTML = "<div id=\"" + node.name + "_inner\" class=\"inner_node\">" + node.name + "</div>";
 					
 					element.onclick = function ()
 					{
 						Cic.graph.onClick(node.id);
 					}
+					
 				},
 				
 				onPlaceLabel: function(element, node)
 				{
+					element.style.height = '90px';
+					top_string = element.style.top;
+					top_number = top_string.substring(0,top_string.indexOf('px'));
+					element.style.top = (top_number - 70) + 'px';
 				}
 			}
 		);

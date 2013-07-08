@@ -108,8 +108,9 @@ position: relative;
 left: 10px;
 }
 
-.node{
-position: relative left:-600px; 
+.inner_node{
+position: relative; 
+top: 73px;
 font-family: 'Calibri';
 font-size: 12px;
 font-weight: bold;
@@ -118,6 +119,10 @@ border:hidden; width: 120px;
 text-wrap: unrestricted;
 word-wrap: break-word; width: 120px; length: 40px;
 text-align: center;
+}
+
+.node{
+position: relative;
 }
 
 div#cic-label{
