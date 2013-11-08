@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>ONC - MUSICO</title>
+		<link rel="stylesheet" type="text/css" href="styles/cic.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		  
+		<script language="javascript" type="text/javascript" src="scripts/jit.js"></script>		
+		<script language="javascript" type="text/javascript" src="scripts/cic.js"></script>		
+		<script language="javascript" type="text/javascript" src="scripts/otherFunctions.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>	  
+		<script src="scripts/mustache.js" type="text/javascript"></script>
+		<script src="scripts/jquery.mustache.js" type="text/javascript"></script>
+		
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		
+		<script language="javascript" type="text/javascript">
+			function toggleDiv(divid){
+				if(document.getElementById(divid).style.display == 'none'){
+				  document.getElementById(divid).style.display = 'block';
+				}else{
+				  document.getElementById(divid).style.display = 'none';
+				}
+			}
+			
+			function start(){
+				loadAllData();
+			}
+		</script>
+	</head>
+
+	<body onload="start()">
+		<div id="banner">
+			<a href="http://www.healthit.gov/" target="_blank" >
+				<img src="images/HealthIT-logo-281x109.png" style= "position:absolute; right:2px;" alt="ONC Logo"/>
+			</a>
+			<div float="center">
+			<img src="images/MUSICO BANNER.png" alt="Musico Banner"/>
+			</div>
+		</div>
+		  
+		<div id="cic">
+			<div id="rolesGraph">
+				<div id="loading"> Loading graph </div><br/>
+			</div>
+		</div>	
+		<div id="cic_info"/>
+		<span class="initiative">
+			<span style= "font-size: 16pt; color: blue; background-color: yellow">MUSICO allows you to view the relationships between the different parties involved in the healthcare ecosystem as they relate to Meaningful Use and Standards Development</span>
+			<h3>Instructions:</h3>
+				<ol> 
+					<li>Left-Click on an actor to bring it to the center of the visualization tool</li>
+					<li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li>
+				</ol>
+				
+				<a href="http://wiki.siframework.org/" target="_blank">
+					<img src="images/s&i_logo.png" style= "position:absolute; bottom:15px; right:5px;"/>
+				</a>
+				<img src="images/MusicoKey.png" style= "position:absolute; bottom:15px; left:5px;"/>
+		</span>
+	</body>
+</html>

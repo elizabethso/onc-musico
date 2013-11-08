@@ -1,16 +1,13 @@
-var Cic = 
-{
-	canvas: undefined,
-	
-	info: undefined,
-	
-	graph: undefined,
-	
-	init: function ()
-	{
-		Cic.canvas = document.getElementById("cic");
+var Cic = function() {
+	var Cic2 = {
+			canvas: undefined,
+			graph: undefined
+	};
+
+	var init = function (canvasId, graphData, displayData)
+	{	
+		Cic2.canvas = document.getElementById(canvasId);
 		Cic.info = document.getElementById("cic_info");
-		
 		
 		$jit.RGraph.Plot.NodeTypes.implement({
 			'image': {
@@ -23,11 +20,10 @@ var Cic =
 				}
 			}
 		});
-		
-		
-		Cic.graph = new $jit.RGraph(		
+
+		Cic2.graph = new $jit.RGraph(		
 			{
-				injectInto: Cic.canvas,
+				injectInto: Cic2.canvas,
 				width: 600,
 				height: 560,
 				
@@ -42,33 +38,34 @@ var Cic =
 					enableForEdges: true,
 					onRightClick: function (obj, info, event)
 					{
-						var originNode = Cic.graph.graph.getClosestNodeToOrigin();
+						var originNode = Cic2.graph.graph.getClosestNodeToOrigin();
 						
 						if (obj.id != originNode.id)
 						{
-							var adjacence = Cic.graph.graph.getAdjacence(obj.id, originNode.id);
+							var adjacence = Cic2.graph.graph.getAdjacence(obj.id, originNode.id);
 							
 							if (adjacence && !adjacence.data.hidden && adjacence.data.html)
 							{
 								Cic.info.innerHTML = "<h1>" + adjacence.nodeFrom.name + " &harr; " + 
-									adjacence.nodeTo.name + "</h1>\n<h2>Initiatives</h2>";
-								Cic.info.innerHTML += adjacence.data.html;
+								adjacence.nodeTo.name + "</h1><br/>";
+							
+								displayData(adjacence.data.html);
 							}
 							else
 							{
-								Cic.info.innerHTML = "<span class=\"initiative\"><h1>Instructions:</h1><ol><li>Left-Click on an actor to bring it to the center of the visualization tool</li><li>Right-Click on a second actor to view the S&I initiatives that share the relationship between the two actors</li></ol><a href=\"http://wiki.siframework.org/\" target=\"_blank\"><img src= images/s&i_logo.png style=\"position:absolute; bottom:5px; right:5px;\"></a><img src= images/MusicoKey.png style=\"position:absolute; bottom:5px; left:5px;\"></span>";
+								getHtml('instructions-template', "", false);
 							}
 						}
 					},
 					
 					onMouseEnter: function (obj, info, event)
 					{
-						Cic.canvas.style.cursor = "pointer";
+						Cic2.canvas.style.cursor = "pointer";
 					},
 					
 					onMouseLeave: function (obj, info, event)
 					{
-						Cic.canvas.style.cursor = "";
+						Cic2.canvas.style.cursor = "";
 					}
 				},
 				
@@ -83,6 +80,17 @@ var Cic =
 				{
 					type: "image",
 					overridable: true
+				},
+				
+				Tips:
+				{
+				    enable: true,  
+				    type: 'auto',  
+				    offsetX: 20,  
+				    offsetY: 20,  
+				    onShow: function(tip, node) {  
+				      tip.innerHTML = "<b>Instructions:</b> Left-click on an actor to bring <br/>it to the center of the visualization tool, then <br/>right-click on a second actor to view the <br/>S&I initiatives shared between the two actors";  
+				    } 
 				},
 				
 				onBeforePlotLine: function (adj)
@@ -116,8 +124,8 @@ var Cic =
 					
 					element.onclick = function ()
 					{
-						Cic.graph.onClick(node.id);
-					}
+						Cic2.graph.onClick(node.id);
+					};
 					
 				},
 				
@@ -152,13 +160,17 @@ var Cic =
                                controller.onPlaceLabel(tag, node);
                        }
                });
-		Cic.graph.loadJSON(CicData);
-		Cic.graph.refresh();
-		Cic.graph.config.levelDistance=200;
-		Cic.graph.fx.sequence({
+		Cic2.graph.loadJSON(graphData);
+		Cic2.graph.refresh();
+		Cic2.graph.config.levelDistance=200;
+		Cic2.graph.fx.sequence({
          onComplete: function() {
-         /*alert('Instructions: Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');*/
+        	 /*alert('Instructions: Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');*/
          }
        });
-	}
+	};
+	
+    return {
+        init : init
+    };
 };

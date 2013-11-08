@@ -48,10 +48,21 @@ div#title
 
 }
 
+div#tabs {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	top: 120px;
+	left: 1px;
+	float: left;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
 div#cic
 {
 	width: 630px;
-	height: 510px;
+	height: 530px;
 	position: absolute;
 	top: 120px;
 	left: 1px;
@@ -62,7 +73,7 @@ div#cic
 div#cic_info
 {
 	width: 700px;
-	height: 490px;
+	height: 510px;
 	position: absolute;
 	top: 120px;
 	left: 640px;
@@ -70,6 +81,13 @@ div#cic_info
 	background: none;
 	overflow-y:scroll; height:490;
 	padding: 10px
+}
+
+div#loading
+{
+	position:absolute;
+	top: 5px;
+	left: 10px;
 }
 
 li
@@ -144,10 +162,8 @@ div#banner {
 	color: CCFFFF;
 	font-size: 30;
 	
-
-	
 /* Create Gradient */
- /* IE10 Consumer Preview */ 
+/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(bottom, #008FD1 0%, #0043A0 100%);
 /* Mozilla Firefox */ 
 background-image: -moz-linear-gradient(bottom, #008FD1 0%, #0043A0 100%);
@@ -159,4 +175,10 @@ background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, 
 background-image: -webkit-linear-gradient(bottom, #008FD1 0%, #0043A0 100%);
 /* W3C Markup, IE10 Release Preview */ 
 background-image: linear-gradient(to top, #008FD1 0%, #0043A0 100%);
+}
+
+.tip
+{
+	background: #FFFFCC;
+	border: 1px solid black;
 }
