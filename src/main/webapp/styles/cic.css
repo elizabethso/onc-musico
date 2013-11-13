@@ -90,6 +90,16 @@ div#loading
 	left: 10px;
 }
 
+div#email
+{
+	position:absolute;
+	bottom: 20px;
+	left: 10px;
+	font-family: 'Calibri';
+	font-size: 12px;
+	font-weight: bold;
+}
+
 li
 {
 	margin-left: 10px;
