@@ -29,6 +29,8 @@ var Cic = function() {
 				
 				Edge:
 				{
+					overridable: true,
+					type: 'line',
 					color: $jit.util.rgbToHex([0, 100, 200])
 				},
 				
@@ -36,6 +38,23 @@ var Cic = function() {
 				{
 					enable: true,
 					enableForEdges: true,
+					onClick: function(nodeOrEdge, eventInfo, e)
+					{
+						var adjacence = eventInfo.getEdge();
+						if (adjacence && !adjacence.data.hidden && adjacence.data.html &&
+								(adjacence.nodeFrom._depth == 0 || adjacence.nodeTo._depth == 0))
+						{
+
+							Cic.info.innerHTML = "<h1>" + adjacence.nodeFrom.name + " &harr; " + 
+							adjacence.nodeTo.name + "</h1><br/>";
+						
+							displayData(adjacence.data.html);
+						}
+						else
+						{
+							getHtml('instructions-template', "", false);
+						}
+					},
 					onRightClick: function (obj, info, event)
 					{
 						var originNode = Cic2.graph.graph.getClosestNodeToOrigin();
@@ -89,7 +108,11 @@ var Cic = function() {
 				    offsetX: 20,  
 				    offsetY: 20,  
 				    onShow: function(tip, node) {  
-				      tip.innerHTML = "<b>Instructions:</b> Left-click on an actor to bring <br/>it to the center of the visualization tool, then <br/>right-click on a second actor to view the <br/>S&I initiatives shared between the two actors";  
+				      tip.innerHTML = "<b>Instructions:</b> Click on an actor to bring <br/>" +
+				      				"it to the center of the visualization tool, then <br/>" +
+				      				"click on the opaque line or <br/>" +
+				      				"right-click on a second actor to view the <br/>" +
+				      				"S&I initiatives shared between the two actors";  
 				    } 
 				},
 				
@@ -165,7 +188,7 @@ var Cic = function() {
 		Cic2.graph.config.levelDistance=200;
 		Cic2.graph.fx.sequence({
          onComplete: function() {
-        	 /*alert('Instructions: Left-click on an actor to bring it to the center of the visualization tool then right-click on a second actor to view the S&I initiatives that share the relationship between the two actors');*/
+        	 /*alert('Instructions: Click on an actor to bring it to the center of the visualization tool then right-click on a second actor or click on the opaque line to view the S&I initiatives that share the relationship between the two actors');*/
          }
        });
 	};

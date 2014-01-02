@@ -2235,7 +2235,7 @@ Extras.Classes.Events = new Class({
          this.hovered = false;
        }
      }
-     if(this.hovered = (event.getNode() || (this.config.enableForEdges && event.getEdge()))) {
+     if(this.hovered == (event.getNode() || (this.config.enableForEdges && event.getEdge()))) {
        this.config.onMouseEnter(this.hovered, event, evt);
      } else {
        this.config.onMouseMove(false, event, evt);
@@ -2250,7 +2250,7 @@ Extras.Classes.Events = new Class({
   onMouseDown: function(e, win, event) {
     var evt = $.event.get(e, win), label;
     if(this.dom) {
-      if(label = this.isLabel(e, win)) {
+      if(label == this.isLabel(e, win)) {
         this.pressed = this.viz.graph.getNode(label.id);
       }
     } else {
@@ -5738,11 +5738,11 @@ Graph.Op = {
                         var nodeFrom = graph.getNode(adj.nodeFrom.id);
                         var nodeTo = graph.getNode(adj.nodeTo.id);
                         if(!nodeFrom.adjacentTo(nodeTo)) {
-                            var adj = viz.graph.getAdjacence(nodeFrom.id, nodeTo.id);
+                            var adj1 = viz.graph.getAdjacence(nodeFrom.id, nodeTo.id);
                             fadeEdges = true;
-                            adj.setData('alpha', 1);
-                            adj.setData('alpha', 1, 'start');
-                            adj.setData('alpha', 0, 'end');
+                            adj1.setData('alpha', 1);
+                            adj1.setData('alpha', 1, 'start');
+                            adj1.setData('alpha', 0, 'end');
                         }
                     });
                 }); 
@@ -5921,13 +5921,13 @@ Graph.Op = {
                 var nodeFrom = viz.graph.getNode(adj.nodeFrom.id);
                 var nodeTo = viz.graph.getNode(adj.nodeTo.id);
                 if(!nodeFrom.adjacentTo(nodeTo)) {
-                    var adj = viz.graph.addAdjacence(nodeFrom, nodeTo, adj.data);
+                    var adj1 = viz.graph.addAdjacence(nodeFrom, nodeTo, adj.data);
                     if(nodeFrom.startAlpha == nodeFrom.endAlpha 
                     && nodeTo.startAlpha == nodeTo.endAlpha) {
                         fadeEdges = true;
-                        adj.setData('alpha', 0);
-                        adj.setData('alpha', 0, 'start');
-                        adj.setData('alpha', 1, 'end');
+                        adj1.setData('alpha', 0);
+                        adj1.setData('alpha', 0, 'start');
+                        adj1.setData('alpha', 1, 'end');
                     } 
                 }
             });
@@ -6392,6 +6392,17 @@ var EdgeHelper = {
             maxPosX = max(posFrom.x, posTo.x),
             minPosY = min(posFrom.y, posTo.y),
             maxPosY = max(posFrom.y, posTo.y);
+        
+        /* Case of Vertical and Horizontal line add some buffer around it */
+        var buffer = 4;
+        if ((maxPosX - minPosX) < buffer ) {
+        	minPosX = minPosX - buffer;
+        	maxPosX = maxPosX + buffer;
+        }
+        if ((maxPosY - minPosY) < buffer ) {
+        	minPosY = minPosY - buffer;
+        	maxPosY = maxPosY + buffer;
+        }
         
         if(pos.x >= minPosX && pos.x <= maxPosX 
             && pos.y >= minPosY && pos.y <= maxPosY) {
