@@ -1,6 +1,7 @@
 var initiatives = {};
 var selectedInitiative="";
 var roleNodes = undefined;
+var initiativeNodes = undefined;
 var rolesToInitiativesMap = {}; 
 
 var graphMap = {};
@@ -10,18 +11,29 @@ var noRelationship = "No Current Relationship";
 function loadAllData(){
 	$.getJSON("./MUSICOData.action" , function(data){
 		var CicData = new Array();
+		var CicInitiativeNodeData = new Array();
 		
 		initiatives = data.initiativeMap;		
 		graphMap = data.graphMap;
 		
 	    $.each(graphMap, function(key, val) {
 	    	CicData.push(val);
+	    	getSharedInitiatives(val.name, val.adjacencies);
 	    });
 	    
 	    $("#loading").hide();
+
+	    populateInitiativesDropdown();
 	    
 	    roleNodes = Cic();
 	    roleNodes.init("rolesGraph", CicData, displayInitiativeData);
+	    
+	    $.each(data.initiativeNodeMap, function(key, val) {
+	    	CicInitiativeNodeData.push(val);
+	    });
+
+	    initiativeNodes = Cic();
+	    initiativeNodes.init("initiativesGraph", CicInitiativeNodeData, displayStandardsData);
 	});
 }
 
@@ -120,9 +132,25 @@ function displayInitiativeData(htmlLinks){
 	}
 }
 
+function displayStandardsData(htmlLinks){
+	Cic.info.innerHTML += "<h2>Standards</h2>";
+	
+	for(var i=0; i<htmlLinks.length; i++){
+		var data = htmlLinks[i];
+
+		if(data != ""){
+			Cic.info.innerHTML += "<li>"+ data + "</li>";			
+		}
+		else{
+			getHtml('initiativeTBD-template', "", true);
+		}
+	}
+	
+	return Cic.info.innerHTML;
+}
+
 function hasInitiative(nodeName){
 	if($.inArray(selectedInitiative, rolesToInitiativesMap[nodeName]) >-1){
-		console.log(nodeName);
 	    return true;
 	}
 }

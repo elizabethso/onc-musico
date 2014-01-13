@@ -50,7 +50,7 @@ div#title
 
 div#tabs {
 	width: 600px;
-	height: 600px;
+	height: 615px;
 	position: absolute;
 	top: 120px;
 	left: 1px;
@@ -59,21 +59,10 @@ div#tabs {
 	overflow: hidden;
 }
 
-div#cic
-{
-	width: 630px;
-	height: 530px;
-	position: absolute;
-	top: 120px;
-	left: 1px;
-	border: 1px solid black;
-	overflow: hidden;
-}
-
 div#cic_info
 {
 	width: 700px;
-	height: 510px;
+	height: 600px;
 	position: absolute;
 	top: 120px;
 	left: 640px;
@@ -86,7 +75,7 @@ div#cic_info
 div#loading
 {
 	position:absolute;
-	top: 5px;
+	top: 50px;
 	left: 10px;
 }
 

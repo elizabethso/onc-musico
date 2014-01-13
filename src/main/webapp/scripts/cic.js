@@ -98,7 +98,11 @@ var Cic = function() {
 				Node:
 				{
 					type: "image",
-					overridable: true
+					overridable: true,
+                    CanvasStyles: {
+                        shadowColor: '#FFFFFF',
+                        shadowBlur: 10
+                    }
 				},
 				
 				Tips:
@@ -139,6 +143,12 @@ var Cic = function() {
 				onBeforePlotNode: function (node)
 				{
 					// TODO: figure out node alpha dynamic setting
+                    if(hasInitiative(node.name)){
+                    	node.setCanvasStyle('shadowColor', '#FFFF00');
+                    }
+                    else{
+                    	node.setCanvasStyle('shadowColor', '#FFFFFF');
+                    }
 				},
 				
 				onCreateLabel: function(element, node)
@@ -193,7 +203,12 @@ var Cic = function() {
        });
 	};
 	
+	var refresh = function refreshGraph(){
+		Cic2.graph.refresh();
+	};
+	
     return {
-        init : init
+        init : init,
+        refresh: refresh
     };
 };
