@@ -6,6 +6,7 @@ var Cic = function() {
 
 	var init = function (canvasId, graphData, displayData)
 	{	
+		console.log("Calling init for ");
 		Cic2.canvas = document.getElementById(canvasId);
 		Cic.info = document.getElementById("cic_info");
 		
@@ -142,9 +143,8 @@ var Cic = function() {
 				
 				onBeforePlotNode: function (node)
 				{
-					// TODO: figure out node alpha dynamic setting
                     if(hasInitiative(node.name)){
-                    	node.setCanvasStyle('shadowColor', '#FFFF00');
+                    	node.setCanvasStyle('shadowColor', '#ff0000');
                     }
                     else{
                     	node.setCanvasStyle('shadowColor', '#FFFFFF');
@@ -153,7 +153,7 @@ var Cic = function() {
 				
 				onCreateLabel: function(element, node)
 				{
-					element.innerHTML = "<div id=\"" + node.name + "_inner\" class=\"inner_node\">" + node.name + "</div>";
+                    element.innerHTML = "<div id=\"" + node.name + "_inner\" class=\"inner_node\">" + node.name + "</div>";
 					
 					element.onclick = function ()
 					{
@@ -168,6 +168,11 @@ var Cic = function() {
 					top_string = element.style.top;
 					top_number = top_string.substring(0,top_string.indexOf('px'));
 					element.style.top = (top_number - 70) + 'px';
+					if(hasInitiative(node.name)){
+                    	element.innerHTML = "<div id=\"" + node.name + "_inner\" class=\"inner_node\"><u>" + node.name + "</u></div>";
+                    } else {
+                    	element.innerHTML = "<div id=\"" + node.name + "_inner\" class=\"inner_node\">" + node.name + "</div>";
+                    }
 				}
 			}
 		);

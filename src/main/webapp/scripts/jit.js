@@ -2084,7 +2084,7 @@ var MouseEventsManager = new Class({
         return that.node = this.node = false;
       },
       getEdge: function() {
-        if(this.getEdgeCalled) return this.edge;
+        //if(this.getEdgeCalled) return this.edge;
         this.getEdgeCalled = true;
         var hashset = {};
         for(var id in graph.edges) {
@@ -6386,6 +6386,7 @@ var EdgeHelper = {
       (end code)
       */
       'contains': function(posFrom, posTo, pos, epsilon) {
+    	var epsilonLine = 10;
         var min = Math.min, 
             max = Math.max,
             minPosX = min(posFrom.x, posTo.x),
@@ -6406,11 +6407,11 @@ var EdgeHelper = {
         
         if(pos.x >= minPosX && pos.x <= maxPosX 
             && pos.y >= minPosY && pos.y <= maxPosY) {
-          if(Math.abs(posTo.x - posFrom.x) <= epsilon) {
+          if(Math.abs(posTo.x - posFrom.x) <= epsilonLine || Math.abs(posTo.y - posFrom.y) <= epsilonLine) {
             return true;
           }
           var dist = (posTo.y - posFrom.y) / (posTo.x - posFrom.x) * (pos.x - posFrom.x) + posFrom.y;
-          return Math.abs(dist - pos.y) <= epsilon;
+          return Math.abs(dist - pos.y) <= epsilonLine;
         }
         return false;
       }
@@ -16405,7 +16406,12 @@ $jit.RGraph.$extend = true;
       'contains': function(adj, pos) {
         var from = adj.nodeFrom.pos.getc(true),
             to = adj.nodeTo.pos.getc(true);
-        return this.edgeHelper.line.contains(from, to, pos, this.edge.epsilon);
+        /* Only check for edges for the center node */
+        if ((from.x ==0 && from.y ==0) || (to.x ==0 && to.y ==0)) {
+//        	console.log(adj.nodeFrom.name + " --- " + adj.nodeTo.name);
+        	return this.edgeHelper.line.contains(from, to, pos, this.edge.epsilon);
+        }
+        return false;
       }
     },
     'arrow': {

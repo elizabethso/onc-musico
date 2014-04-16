@@ -30,11 +30,9 @@
 			        activate: function(event, ui) {
 					   if($("#tabs").tabs('option', 'active') == 1){
 						   $("#standardsCheckbox").hide();
-						   $("#email").hide();
 					   }
 					   else{
 						   $("#standardsCheckbox").show();
-						   $("#email").show();
 					   }	
 			        }
 			   });
@@ -68,28 +66,27 @@
 		</div>
 
 		<div id="tabs">
-		  <ul>
-		  	<li><a href="#rolesGraph">Healthcare roles as actors</a></li>
-		    <li><a href="#initiativesGraph">Initiatives as actors</a></li>
-		  </ul>
-		  
-		  <div id="rolesGraph">
-		  	<div id="loading"> Loading graph </div><br/>
-			  	<div id="initiativesCheckbox">
+			<ul>
+				<li><a href="#rolesGraph">Actor View</a></li>
+				<li><a href="#initiativesGraph">Initiative View</a></li>
+			</ul>
+
+				
+			<div id="rolesGraph">
+				<div id="loading"> Loading graph </div><br/>
+				<div id="initiativesCheckbox">
 					<select id="select" class="target">
-						<option value="default">--- Select an initiative to find its associated roles ---</option>
+						<option value="default">--- Select an initiative to find its associated actors ---</option>
 					</select>
-				</div>
+				</div><br/>
 			</div>
-			<div id="email"> Send feedback to <a href="mailto:musico@esacinc.com" target="_top">musico@esacinc.com</a></div><br/>
 		
-		  <div id="initiativesGraph">
-		  	<div id="standardsCheckbox">
-				<select id="select" class="target"></select>
+			<div id="initiativesGraph">
 			</div>
-		  </div>
-		
+
+			<br/><div id="email"> Send feedback to <a href="mailto:musico@esacinc.com" target="_top">musico@esacinc.com</a></div>
 		</div>
+		
 		<div id="cic_info"/>
 		<span class="initiative">
 			<span style= "font-size: 16pt; color: blue; background-color: yellow">MUSICO allows you to view the relationships between the different parties involved in the healthcare ecosystem as they relate to Meaningful Use and Standards Development</span>

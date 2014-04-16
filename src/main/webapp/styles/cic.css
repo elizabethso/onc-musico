@@ -31,7 +31,7 @@ h3
 
 h4
 {
-	font-size: 18t;
+	font-size: 18pt;
 	color: red;
 }
 div
@@ -68,7 +68,7 @@ div#cic_info
 	left: 640px;
 	border: 1px solid black;
 	background: none;
-	overflow-y:scroll; height:490;
+	overflow-y:scroll;
 	padding: 10px
 }
 
@@ -138,8 +138,7 @@ font-size: 12px;
 font-weight: bold;
 background: none;
 border:hidden; width: 120px; 
-text-wrap: unrestricted;
-word-wrap: break-word; width: 120px; length: 40px;
+word-wrap: break-word; width: 120px;
 text-align: center;
 }
 
@@ -158,8 +157,8 @@ div#banner {
 	height: auto;
 	margin: 0.25% 0.25% 0;
 	font-family: Tahoma;
-	color: CCFFFF;
-	font-size: 30;
+	color: #CCFFFF;
+	font-size: 30pt;
 	
 /* Create Gradient */
 /* IE10 Consumer Preview */ 
